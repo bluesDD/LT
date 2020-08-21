@@ -118,14 +118,21 @@ Do you want to perform this update?  [Use arrows to move, enter to select, type 
 
 ---
 
-# 機能
+# リソース生成方法の比較
 
-- ダッシュボード
-- 
+- Cloudformation
+  - 専用の記法を勉強する必要がある
+  - 宣言的に記載するため、コードの量が冗長になりがち
+- SDK
+  - 冪等性が保たれない
+
 ---
 
 # 料金
-
+ 
+- 1人なら無料
+- グループなら...
+- 
 ---
 
 # まとめ
