@@ -28,6 +28,8 @@ marp: true
 - 複数言語（JavaScript、Python、TypeScript、Go、C#）で、
 AWS、Azure、GCP、K8s上にリソースを構築できる。
 
+- 
+
 - [公式ページ](https://www.pulumi.com/)
 
 
@@ -100,6 +102,21 @@ pulumi.export('bucket_name', bucket.id)
 
 ---
 
+# Cloudformationで書くと
+
+前スライドと同じことを実行する
+
+```yaml
+AWSTemplateFormatVersion: 2010-09-09
+Resources:
+  S3Buckt:
+    Type: "AWS::S3::Bucket"
+    Properties:
+      BucketName: "my-bucket"
+```
+---
+
+
 # 変更を適用する :rocket:
 
 ```
@@ -138,8 +155,10 @@ $ aws s3 ls
 
 # いいところ
 
-- リソースの状態をPulumi側で保持してくれるため、リトライ時の処理を気にしなくて済む
+- リソースの状態をPulumi側で保持してくれる
+  - 差分だけを自動で更新してくれる
 - コンソール画面でリソースの状態、デプロイ履歴などを確認できる
+- 静的型付け言語で書いた場合は、リソースに必要なパラメータをサジェストしてくれたり型情報のサポートをしてくれる
 
 ---
 
