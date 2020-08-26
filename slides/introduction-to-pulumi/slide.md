@@ -28,8 +28,6 @@ marp: true
 - 複数言語（JavaScript、Python、TypeScript、Go、C#）で、
 AWS、Azure、GCP、K8s上にリソースを構築できる。
 
-- 
-
 - [公式ページ](https://www.pulumi.com/)
 
 
